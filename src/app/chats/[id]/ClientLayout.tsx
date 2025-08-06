@@ -1,6 +1,4 @@
 "use client";
-
-import { setChatRooms } from "@/features/chatRooms/chatRoomsSlice";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
