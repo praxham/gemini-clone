@@ -179,7 +179,7 @@ const ChatSection = () => {
           })
         );
       }
-    }, 0);
+    }, 2000);
 
     setMessage("");
     setUploadedImages([]);

@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const login = useSelector((state: any) => state.login);
 
@@ -21,4 +21,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return <div>{children}</div>;
 };
 
-export default layout;
+export default ClientLayout;
