@@ -23,7 +23,6 @@ export const chatRoomsSlice = createSlice({
   reducers: {
     createChatRoom: (state, action) => {
       const chatsArray = action?.payload?.chatsData?.chats;
-      console.log("chatsArray", chatsArray);
       const firstUserMessage = chatsArray
         ?.find((chat: Chat) => chat.from === "user")
         ?.message?.toLowerCase()

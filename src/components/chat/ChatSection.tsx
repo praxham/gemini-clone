@@ -108,7 +108,6 @@ const ChatSection = () => {
         const chatRoom = storedChatrooms?.find(
           (chatRoom) => chatRoom?.id === params.id
         );
-        console.log("chatRoom", chatRoom);
         if (chatRoom) {
           setChats(chatRoom.chats);
         }
@@ -118,7 +117,6 @@ const ChatSection = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage.getItem("chatRooms")) {
-      console.log(localStorage.getItem("chatRooms") || "[]");
       const chatRooms = JSON.parse(localStorage.getItem("chatRooms") || "[]");
       dispatch(setChatRooms({ chatRooms: chatRooms }));
       const loadedChats =
@@ -188,7 +186,6 @@ const ChatSection = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && Array.isArray(storedChatrooms)) {
       localStorage.setItem("chatRooms", JSON.stringify(storedChatrooms));
-      console.log("storedChatrooms", storedChatrooms);
     }
   }, [storedChatrooms]);
 

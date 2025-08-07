@@ -22,7 +22,6 @@ const LogoutPopup = ({ openLogoutPopup, setOpenLogoutPopup }: any) => {
   const handleLogout = () => {
     localStorage.setItem("loggedIn", JSON.stringify(false));
     dispatch(login({ loggedIn: false, name: "" }));
-    console.log("login", getLogin);
     router.push("/");
   };
 

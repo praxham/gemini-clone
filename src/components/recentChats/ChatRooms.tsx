@@ -19,7 +19,6 @@ const ChatRooms = () => {
   const chatRooms = useSelector(
     (state: RootState) => state.chatRooms.chatRooms
   );
-  console.log("chatRooms", chatRooms);
   return (
     <div className="w-full flex flex-col gap-1">
       {Array.isArray(chatRooms) &&
