@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Gemini Frontend Clone – Kuvaka Tech Assignment
 
-## Getting Started
+A fully responsive, Gemini-style conversational AI interface built with Next.js App Router, Zustand, and Tailwind CSS. This project simulates a conversational AI experience with OTP login, chatroom management, typing indicators, image uploads, and more.
+🔗 Live Demo : https://gemini-clone-one-gamma.vercel.app/login
 
-First, run the development server:
+👉 Click here to view the live app
+📁 GitHub Repository
+🧩 Features
+✅ Authentication (OTP Flow)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Phone number login with country code dropdown
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Country codes fetched from restcountries.com
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    OTP simulated with setTimeout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    Form validation via React Hook Form + Zod
 
-## Learn More
+✅ Dashboard
 
-To learn more about Next.js, take a look at the following resources:
+    View list of chatrooms
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Create and delete chatrooms
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    Toast confirmation on creation/deletion
 
-## Deploy on Vercel
+    Debounced search bar to filter chatrooms
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Chatroom data saved in localStorage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✅ Chat Interface
+
+    Chat UI with:
+
+        User + Gemini messages
+
+        Timestamps and AI typing indicator
+
+        Simulated AI response using setTimeout + throttling
+
+        Reverse infinite scroll (simulated with dummy data)
+
+        Client-side pagination (20 messages/page)
+
+    Image uploads using local preview (base64 or URL)
+
+    Copy-to-clipboard on hover
+
+✅ Global UX Features
+
+    Mobile responsive (Tailwind CSS)
+
+    Dark mode toggle
+
+    Skeleton loaders for messages
+
+    Toast notifications on major actions (OTP, message, etc.)
+
+    Keyboard accessibility across key interactions
+
+🛠 Tech Stack
+Feature	Tech Used
+Framework	Next.js 15 (App Router)
+State Management	Zustand
+Form Validation	React Hook Form + Zod
+Styling	Tailwind CSS
+Deployment	Vercel
+Image Upload	base64 / preview URL
+AI Simulation	setTimeout + throttling
+
+🔄 Core Implementations
+1. OTP Flow
+
+    Validates phone number input with Zod schema
+
+    Simulates OTP send/verify using setTimeout
+
+    Persists login state in localStorage
+
+2. Chatroom Management
+
+    Zustand used for state
+
+    Chatroom array stored in and read from localStorage
+
+    Deletion confirmation via toast
+
+3. AI Chat Behavior
+
+    Simulated AI replies using throttled setTimeout
+
+    Typing indicator shown before response
+
+    Scrolls to latest message automatically
+
+    Infinite scroll simulates older messages with dummy data
+
+4. Image Upload
+
+    Converts image to base64 or preview URL using FileReader
+
+    Displays inline in chat bubble
+
+5. Pagination
+
+    Local pagination per chatroom (20 messages/page)
+
+    Older messages fetched with infinite scroll trigger
+
+6. Accessibility
+
+    Keyboard-friendly forms
+
+    Focus rings enabled
+
+    Buttons and inputs fully accessible
